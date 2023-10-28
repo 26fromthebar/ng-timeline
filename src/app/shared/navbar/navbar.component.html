@@ -1,0 +1,54 @@
+<header class="header">
+  <div class="header__info">
+    <p class="header__title">{{ title }}</p>
+  </div>
+
+  <nav class="header__nav nav">
+    <ul class="nav__list">
+      <li>
+        <a
+          [routerLink]="['/intro']"
+          routerLinkActive="active"
+          class="nav__link"
+        ></a>
+      </li>
+      <li>
+        <a
+          [routerLink]="['/chapter-1']"
+          routerLinkActive="active"
+          class="nav__link"
+        ></a>
+      </li>
+      <li>
+        <a
+          [routerLink]="['/chapter-2']"
+          routerLinkActive="active"
+          class="nav__link"
+        ></a>
+      </li>
+      <li>
+        <a
+          [routerLink]="['/chapter-3']"
+          routerLinkActive="active"
+          class="nav__link"
+        ></a>
+      </li>
+      <li>
+        <a
+          [routerLink]="['/chapter-4']"
+          routerLinkActive="active"
+          class="nav__link"
+        ></a>
+      </li>
+      <li>
+        <a
+          [routerLink]="['/outro']"
+          routerLinkActive="active"
+          class="nav__link"
+        ></a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="header__indicator progress"></div>
+</header>

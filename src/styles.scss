@@ -1,1 +1,331 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  /* Color CSS variables */
+  --color-primary: hsl(254, 29%, 40%);
+  --color-primary-light: hsl(254, 50%, 60%);
+  --color-primary-extra-light: hsl(254, 83%, 84%);
+  --color-primary-dark: hsl(254, 25%, 30%);
+  --color-primary-extra-dark: hsl(254, 20%, 25%);
+  --color-orange: hsl(35, 74%, 55%);
+  --color-orange-light: hsl(35, 94%, 35%);
+  --color-red: hsl(2, 64%, 65%);
+  --color-red-dark: hsl(2, 94%, 38%);
+  --color-green: hsl(99, 51%, 48%);
+  --color-green-dark: hsl(99, 85%, 25%);
+  --color-text: #16064c;
+  --color-bg: hsl(264, 100%, 99%);
+  --color-bg-dark: hsl(255, 57%, 92%);
+  --color-bg-extra-dark: hsl(255, 25%, 45%);
+  --color-grey: #828282;
+  --color-grey-light: #e0e0e0;
+  --color-grey-dark: #333333;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Font-family CSS variables */
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Rubik", sans-serif;
+
+  /* Responsive font-size variables (360px - 1920px)*/
+  --fs-14: clamp(0.75rem, 0.715rem + 0.16vw, 0.875rem);
+  --fs-16: clamp(0.9375rem, 0.9231rem + 0.0641vw, 1rem);
+  --fs-18: clamp(1rem, 0.925rem + 0.2vw, 1.125rem);
+  --fs-20: clamp(1rem, 0.9423rem + 0.2564vw, 1.25rem);
+  --fs-22: clamp(1.1875rem, 1.1442rem + 0.1923vw, 1.375rem);
+  --fs-24: clamp(1.125rem, 1.1rem + 0.4vw, 1.5rem);
+  --fs-28: clamp(1.25rem, 1.1346rem + 0.5128vw, 1.75rem);
+  --fs-32: clamp(1.375rem, 1.2308rem + 0.641vw, 2rem);
+  --fs-36: clamp(1.5rem, 1.05rem + 1.2vw, 2.25rem);
+  --fs-40: clamp(1.5rem, 1.2692rem + 1.0256vw, 2.5rem);
+  --fs-48: clamp(1.75rem, 1.4615rem + 1.2821vw, 3rem);
+  --fs-56: clamp(1.75rem, 1.3462rem + 1.7949vw, 3.5rem);
+  --fs-64: clamp(1.75rem, 1.2308rem + 2.3077vw, 4rem);
+  --fs-80: clamp(2rem, 1.3077rem + 3.0769vw, 5rem);
+  --fs-96: clamp(2rem, 1.0769rem + 4.1026vw, 6rem);
+
+  /* Responsive Distance (360px - 1920px) */
+  --rds-1: clamp(0.5rem, 0.3846rem + 0.5128vw, 1rem);
+  --rds-2: clamp(1rem, 0.7692rem + 1.0256vw, 2rem);
+  --rds-3: clamp(1.5rem, 1.1538rem + 1.5385vw, 3rem);
+  --rds-4: clamp(2rem, 1.5385rem + 2.0513vw, 4rem);
+  --rds-5: clamp(2.5rem, 1.9231rem + 2.5641vw, 5rem);
+  --rds-6: clamp(3rem, 2.3077rem + 3.0769vw, 6rem);
+  --rds-8: clamp(4rem, 3.0769rem + 4.1026vw, 8rem);
+  --rds-10: clamp(5rem, 3.8462rem + 5.1282vw, 10rem);
+  --rds-12: clamp(6rem, 4.6154rem + 6.1538vw, 12rem);
+  --rds-15: clamp(7.5rem, 5.7692rem + 7.6923vw, 15rem);
+  --rds-20: clamp(10rem, 7.6923rem + 10.2564vw, 20rem);
+  --rds-25: clamp(12.5rem, 9.6154rem + 12.8205vw, 25rem);
+  --rds-30: clamp(15rem, 11.5385rem + 15.3846vw, 30rem);
+
+  /* Elements height variables (360px - 1920px) */
+  --header-width: 10rem;
+}
+
+/* Global reset */
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::-moz-selection,
+*::selection {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+*::-moz-placeholder,
+*:-ms-input-placeholder,
+*::placeholder {
+  font-size: var(--fs-16);
+  color: var(--color-grey);
+}
+
+*::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background-color: var(--color-bg); /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary); /* color of the scroll thumb */
+  border-radius: 100vh; /* roundness of the scroll thumb */
+  border: 3px solid var(--color-bg); /* creates padding around scroll thumb */
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) var(--color-grey);
+}
+
+/* General styling properties and typography start */
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-18);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  color: var(--color-primary-dark);
+  background-color: var(--color-bg);
+  overflow-x: hidden;
+}
+
+main {
+  padding: var(--rds-2) 0 var(--rds-2) var(--header-width);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ff-secondary);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--color-primary);
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: var(--fs-48);
+}
+
+h2 {
+  font-size: var(--fs-32);
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--fs-24);
+}
+
+p {
+  // max-width: 100ch;
+}
+
+// Link styles in the right order
+a {
+  font-family: inherit;
+  font-size: var(--fs-18);
+  font-weight: 400;
+  color: var(--color-primary);
+  letter-spacing: 0.5px;
+  text-decoration: none;
+
+  transition: color 0.25s ease-in-out;
+}
+
+a:link {
+}
+
+a:visited {
+  // color: var(--color-primary);
+}
+
+a:focus {
+  color: var(--color-primary);
+}
+
+a:hover {
+  color: var(--color-primary-light);
+}
+
+a:active {
+  color: var(--color-primary-light);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+  display: block;
+  max-width: 100%;
+}
+
+button,
+label,
+input,
+textarea {
+  font-family: inherit;
+  font-size: var(--fs-18);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  color: var(--color-primary);
+}
+
+// Utils classes
+
+// Containers
+.cont,
+.cont-xs,
+.cont-sm,
+.cont-lg,
+.cont-xl,
+.cont-left,
+.cont-right {
+  margin-inline: auto;
+  width: 92%;
+}
+
+@media screen and (min-width: 65em) {
+  .cont-xs {
+    width: 50%;
+  }
+
+  .cont-sm {
+    width: 65%;
+  }
+  .cont {
+    width: 75%;
+  }
+  .cont-lg {
+    width: 85%;
+  }
+  .cont-xl {
+    width: 92%;
+  }
+
+  .cont-left {
+    margin-inline: 0 auto;
+    width: 87.5%;
+  }
+
+  .cont-right {
+    margin-inline: auto 0;
+    width: 87.5%;
+  }
+}
+
+.center {
+  margin-inline: auto;
+}
+
+// Classes for margins
+.m-t-1 {
+  margin-top: var(--rds-1) !important;
+}
+
+.m-t-2 {
+  margin-top: var(--rds-2) !important;
+}
+
+.m-t-3 {
+  margin-top: var(--rds-3) !important;
+}
+
+.m-t-4 {
+  margin-top: var(--rds-4) !important;
+}
+
+.m-t-5 {
+  margin-top: var(--rds-5) !important;
+}
+
+.m-t-8 {
+  margin-top: var(--rds-8) !important;
+}
+
+.m-b-1 {
+  margin-bottom: var(--rds-1) !important;
+}
+
+.m-b-2 {
+  margin-bottom: var(--rds-2) !important;
+}
+
+.m-b-3 {
+  margin-bottom: var(--rds-3) !important;
+}
+
+.m-b-4 {
+  margin-bottom: var(--rds-4) !important;
+}
+
+.m-b-5 {
+  margin-bottom: var(--rds-5) !important;
+}
+
+.m-b-8 {
+  margin-bottom: var(--rds-8) !important;
+}
+
+// General utility classes
+
+.hide {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.show {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.appear {
+  display: block !important;
+}
+
+.disappear {
+  display: none !important;
+}
