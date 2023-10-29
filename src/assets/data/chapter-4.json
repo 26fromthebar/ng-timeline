@@ -1,0 +1,57 @@
+[
+  {
+    "chapterId": 4,
+    "orderIndex": 0,
+    "title": "Hero",
+    "mainText": "This is the main text for hero.",
+    "secondaryText": "This is the secondary text for Section 1.",
+    "backgroundImgUrl": "chapter1-bg.jpg",
+    "imagesSrc": ["image1.jpg", "image2.jpg"],
+    "videosSrc": ["video1.mp4"],
+    "id": 4000
+  },
+  {
+    "chapterId": 4,
+    "orderIndex": 1,
+    "title": "Section 1",
+    "mainText": "This is the main text for Section 1.",
+    "secondaryText": "This is the secondary text for Section 1.",
+    "backgroundImgUrl": "chapter2-bg.jpg",
+    "imagesSrc": ["image3.jpg", "image4.jpg"],
+    "videosSrc": ["video2.mp4"],
+    "id": 4001
+  },
+  {
+    "chapterId": 4,
+    "orderIndex": 2,
+    "title": "Section 2",
+    "mainText": "This is the main text for Section 2.",
+    "secondaryText": "This is the secondary text for Section 2.",
+    "backgroundImgUrl": "chapter2-bg.jpg",
+    "imagesSrc": ["image5.jpg", "image6.jpg"],
+    "videosSrc": ["video2.mp4"],
+    "id": 4002
+  },
+  {
+    "chapterId": 4,
+    "orderIndex": 3,
+    "title": "Section 3",
+    "mainText": "This is the main text for Section 3.",
+    "secondaryText": "This is the secondary text for Section 3.",
+    "backgroundImgUrl": "chapter4-bg.jpg",
+    "imagesSrc": ["image7.jpg", "image8.jpg"],
+    "videosSrc": ["video2.mp4"],
+    "id": 4003
+  },
+  {
+    "chapterId": 4,
+    "orderIndex": 4,
+    "title": "Section 4",
+    "mainText": "This is the main text for Section 4.",
+    "secondaryText": "This is the secondary text for Section 4.",
+    "backgroundImgUrl": "chapter5-bg.jpg",
+    "imagesSrc": ["image9.jpg", "image10.jpg"],
+    "videosSrc": ["video3.mp4"],
+    "id": 4004
+  }
+]

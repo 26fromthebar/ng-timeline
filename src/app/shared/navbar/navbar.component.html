@@ -5,44 +5,9 @@
 
   <nav class="header__nav nav">
     <ul class="nav__list">
-      <li>
+      <li *ngFor="let chapter of data; index as i">
         <a
-          [routerLink]="['/intro']"
-          routerLinkActive="active"
-          class="nav__link"
-        ></a>
-      </li>
-      <li>
-        <a
-          [routerLink]="['/chapter-1']"
-          routerLinkActive="active"
-          class="nav__link"
-        ></a>
-      </li>
-      <li>
-        <a
-          [routerLink]="['/chapter-2']"
-          routerLinkActive="active"
-          class="nav__link"
-        ></a>
-      </li>
-      <li>
-        <a
-          [routerLink]="['/chapter-3']"
-          routerLinkActive="active"
-          class="nav__link"
-        ></a>
-      </li>
-      <li>
-        <a
-          [routerLink]="['/chapter-4']"
-          routerLinkActive="active"
-          class="nav__link"
-        ></a>
-      </li>
-      <li>
-        <a
-          [routerLink]="['/outro']"
+          [routerLink]="[chapter.url]"
           routerLinkActive="active"
           class="nav__link"
         ></a>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ChaptersDataService } from 'src/app/services/chapters-data';
+import { ChapterSlim } from '../classes/chapter-slim';
 
 @Component({
   selector: 'tl-navbar',
@@ -7,7 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   title: string = 'Menu';
-  constructor() {}
+  data: ChapterSlim[] = [];
+  sub!: PushSubscription;
+  constructor(private chaptersData: ChaptersDataService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.chaptersData.getAllChaptersSlim().subscribe({
+      next: (data) => (this.data = data),
+      error: (err) => console.log(err),
+    });
+  }
 }
