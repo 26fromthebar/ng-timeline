@@ -3,6 +3,7 @@ import { IChapterDetails } from '../interfaces/ichapter-details';
 export class ChapterDetails implements IChapterDetails {
   chapterId!: number;
   chapterTitle!: string;
+  id!: number;
   orderIndex!: number;
   title!: string;
   mainText?: string | undefined;
@@ -10,5 +11,6 @@ export class ChapterDetails implements IChapterDetails {
   backgroundImgUrl?: string | undefined;
   imagesSrc?: string[] | undefined;
   videosSrc?: string[] | undefined;
-  id!: number;
+  nextPageUrl?: string;
+  previousPageUrl?: string;
 }

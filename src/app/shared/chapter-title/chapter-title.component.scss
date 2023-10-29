@@ -1,14 +1,11 @@
-:host {
+.title {
   position: fixed;
-  top: 2rem;
+  top: 4rem;
   left: 0;
   right: 0;
-  z-index: 10;
-}
-
-.title {
   padding-left: var(--header-width);
   padding-block: 0.5rem;
   text-align: center;
   background-color: var(--color-grey-light);
+  z-index: 10;
 }

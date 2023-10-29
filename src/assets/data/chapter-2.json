@@ -9,7 +9,9 @@
     "backgroundImgUrl": "/assets/images/background/bg-7.jpg",
     "imagesSrc": ["image1.jpg", "image2.jpg"],
     "videosSrc": ["video1.mp4"],
-    "id": 2000
+    "id": 2000,
+    "previousPageUrl": "/chapter-1/5",
+    "nextPageUrl": "/chapter-2/1"
   },
   {
     "chapterId": 2,
@@ -21,7 +23,9 @@
     "backgroundImgUrl": "/assets/images/background/bg-8.jpg",
     "imagesSrc": ["image3.jpg", "image4.jpg"],
     "videosSrc": ["video2.mp4"],
-    "id": 2001
+    "id": 2001,
+    "previousPageUrl": "/chapter-2",
+    "nextPageUrl": "/chapter-2/2"
   },
   {
     "chapterId": 2,
@@ -33,7 +37,9 @@
     "backgroundImgUrl": "/assets/images/background/bg-9.jpg",
     "imagesSrc": ["image5.jpg", "image6.jpg"],
     "videosSrc": ["video2.mp4"],
-    "id": 2002
+    "id": 2002,
+    "previousPageUrl": "/chapter-2/1",
+    "nextPageUrl": "/chapter-2/3"
   },
   {
     "chapterId": 2,
@@ -45,6 +51,8 @@
     "backgroundImgUrl": "/assets/images/background/bg-10.jpg",
     "imagesSrc": ["image7.jpg", "image8.jpg"],
     "videosSrc": ["video2.mp4"],
-    "id": 2003
+    "id": 2003,
+    "previousPageUrl": "/chapter-2/2",
+    "nextPageUrl": "/chapter-3"
   }
 ]

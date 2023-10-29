@@ -15,6 +15,7 @@ import { OutroComponent } from './outro/outro.component';
 import { NextChapterComponent } from './next-chapter/next-chapter.component';
 import { ChapterTitleComponent } from './shared/chapter-title/chapter-title.component';
 import { BackgroundComponent } from './shared/background/background.component';
+import { NavButtonsComponent } from './shared/nav-buttons/nav-buttons.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { BackgroundComponent } from './shared/background/background.component';
     NextChapterComponent,
     ChapterTitleComponent,
     BackgroundComponent,
+    NavButtonsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

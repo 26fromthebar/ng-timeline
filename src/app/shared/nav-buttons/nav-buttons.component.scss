@@ -1,0 +1,12 @@
+.nav-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  position: absolute;
+  top: 1rem;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(50%);
+  z-index: 10;
+}

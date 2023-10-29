@@ -9,18 +9,8 @@
     "backgroundImgUrl": "/assets/images/background/bg-2.jpg",
     "imagesSrc": ["image1.jpg", "image2.jpg"],
     "videosSrc": ["video1.mp4"],
-    "id": 2000
-  },
-  {
-    "chapterId": 100,
-    "chapterTitle": "Outro",
-    "orderIndex": 1,
-    "title": "Section 1",
-    "mainText": "This is the main text for Section 1.",
-    "secondaryText": "This is the secondary text for Section 1.",
-    "backgroundImgUrl": "/assets/images/background/bg-3.jpg",
-    "imagesSrc": ["image3.jpg", "image4.jpg"],
-    "videosSrc": ["video2.mp4"],
-    "id": 2001
+    "id": 2000,
+    "previousPageUrl": "/chapter-4/4",
+    "nextPageUrl": "/outro/1"
   }
 ]

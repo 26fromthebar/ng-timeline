@@ -2,6 +2,11 @@
 <div *ngIf="chapter">
   <tl-chapter-title [title]="chapter.chapterTitle"></tl-chapter-title>
 
+  <tl-nav-buttons
+    [prevPageUrl]="chapter.previousPageUrl ? chapter.previousPageUrl : '/'"
+    [nextPageUrl]="chapter.nextPageUrl ? chapter.nextPageUrl : '/'"
+  ></tl-nav-buttons>
+
   <tl-background
     [imgSrc]="
       chapter.backgroundImgUrl

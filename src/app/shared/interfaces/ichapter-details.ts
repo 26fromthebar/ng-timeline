@@ -9,4 +9,6 @@ export interface IChapterDetails {
   backgroundImgUrl?: string;
   imagesSrc?: string[];
   videosSrc?: string[];
+  nextPageUrl?: string;
+  previousPageUrl?: string;
 }
