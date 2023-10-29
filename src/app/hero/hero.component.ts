@@ -20,10 +20,9 @@ export class HeroComponent implements OnInit {
     let chapterName = this.route.snapshot.data['chapterName'];
     let orderIndex = this.route.snapshot.data['orderIndex'];
 
-    this.chaptersData.getChapterDetails(chapterName, orderIndex).subscribe({
+    this.chaptersData.getChapterSection(chapterName, orderIndex).subscribe({
       next: (data) => {
         this.chapter = data;
-        console.log(this.chapter);
       },
     });
   }

@@ -1,0 +1,50 @@
+[
+  {
+    "chapterId": 0,
+    "chapterTitle": "Intro",
+    "orderIndex": 0,
+    "title": "Hero",
+    "mainText": "This is the main text for hero.",
+    "secondaryText": "This is the secondary text for Section 1.",
+    "backgroundImgUrl": "/src/assets/images/background/bg-18.jpg",
+    "imagesSrc": ["image1.jpg", "image2.jpg"],
+    "videosSrc": ["video1.mp4"],
+    "id": 2000
+  },
+  {
+    "chapterId": 0,
+    "chapterTitle": "Intro",
+    "orderIndex": 1,
+    "title": "Section 1",
+    "mainText": "This is the main text for Section 1.",
+    "secondaryText": "This is the secondary text for Section 1.",
+    "backgroundImgUrl": "/src/assets/images/background/bg-19.jpg",
+    "imagesSrc": ["image3.jpg", "image4.jpg"],
+    "videosSrc": ["video2.mp4"],
+    "id": 2001
+  },
+  {
+    "chapterId": 0,
+    "chapterTitle": "Intro",
+    "orderIndex": 2,
+    "title": "Section 2",
+    "mainText": "This is the main text for Section 2.",
+    "secondaryText": "This is the secondary text for Section 2.",
+    "backgroundImgUrl": "/src/assets/images/background/bg-20.jpg",
+    "imagesSrc": ["image5.jpg", "image6.jpg"],
+    "videosSrc": ["video2.mp4"],
+    "id": 2002
+  },
+  {
+    "chapterId": 0,
+    "chapterTitle": "Intro",
+    "orderIndex": 3,
+    "title": "Section 3",
+    "mainText": "This is the main text for Section 3.",
+    "secondaryText": "This is the secondary text for Section 3.",
+    "backgroundImgUrl": "/src/assets/images/background/bg-21.jpg",
+    "imagesSrc": ["image7.jpg", "image8.jpg"],
+    "videosSrc": ["video2.mp4"],
+    "id": 2003
+  }
+]

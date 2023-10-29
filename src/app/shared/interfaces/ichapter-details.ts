@@ -1,6 +1,7 @@
 export interface IChapterDetails {
   id: number;
   chapterId: number;
+  chapterTitle: string;
   orderIndex: number;
   title: string;
   mainText?: string;

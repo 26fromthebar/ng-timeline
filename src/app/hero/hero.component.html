@@ -1,3 +1,11 @@
-<p>hero works!</p>
+<tl-chapter-title
+  *ngIf="chapter"
+  [title]="chapter.chapterTitle"
+></tl-chapter-title>
 
-<p *ngIf="chapter">{{ chapter.title }}</p>
+<p>hero works!</p>
+<div *ngIf="chapter">
+  <h1>{{ chapter.chapterTitle }}</h1>
+  <p>{{ chapter.title }}</p>
+  <p>{{ chapter.mainText }}</p>
+</div>

@@ -13,6 +13,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { MapComponent } from './map/map.component';
 import { OutroComponent } from './outro/outro.component';
 import { NextChapterComponent } from './next-chapter/next-chapter.component';
+import { ChapterTitleComponent } from './shared/chapter-title/chapter-title.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { NextChapterComponent } from './next-chapter/next-chapter.component';
     MapComponent,
     OutroComponent,
     NextChapterComponent,
+    ChapterTitleComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

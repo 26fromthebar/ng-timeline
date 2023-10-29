@@ -16,7 +16,13 @@ export class ChaptersDataService {
     );
   }
 
-  getChapterDetails(
+  getChapterItemsAll(chapterName: string): Observable<ChapterDetails[]> {
+    return this.http.get<ChapterDetails[]>(
+      `../../assets/data/${chapterName}.json`
+    );
+  }
+
+  getChapterSection(
     chapterName: string,
     orderIndex: number
   ): Observable<ChapterDetails | undefined> {

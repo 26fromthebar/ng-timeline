@@ -121,7 +121,8 @@ body {
 }
 
 main {
-  padding: var(--rds-2) 0 var(--rds-2) var(--header-width);
+  height: 100vh;
+  padding: var(--rds-4) 0 var(--rds-4) var(--header-width);
 }
 
 h1,
