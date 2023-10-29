@@ -14,6 +14,7 @@ import { MapComponent } from './map/map.component';
 import { OutroComponent } from './outro/outro.component';
 import { NextChapterComponent } from './next-chapter/next-chapter.component';
 import { ChapterTitleComponent } from './shared/chapter-title/chapter-title.component';
+import { BackgroundComponent } from './shared/background/background.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ChapterTitleComponent } from './shared/chapter-title/chapter-title.comp
     OutroComponent,
     NextChapterComponent,
     ChapterTitleComponent,
+    BackgroundComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

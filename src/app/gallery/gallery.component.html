@@ -1,1 +1,17 @@
 <p>gallery works!</p>
+<div *ngIf="chapter">
+  <tl-chapter-title [title]="chapter.chapterTitle"></tl-chapter-title>
+
+  <tl-background
+    [imgSrc]="
+      chapter.backgroundImgUrl
+        ? chapter.backgroundImgUrl
+        : '/assets/images/background/bg-1.jpg'
+    "
+    [altText]="chapter.chapterTitle"
+  ></tl-background>
+
+  <h1>{{ chapter.chapterTitle }}</h1>
+  <p>{{ chapter.title }}</p>
+  <p>{{ chapter.mainText }}</p>
+</div>
