@@ -1,23 +1,34 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ChapterSlim } from '../shared/classes/chapter-slim';
-import { Observable, filter, find, map, tap } from 'rxjs';
-import { ChapterDetails } from '../shared/classes/chapter-details';
+import { Observable, map, of, tap } from 'rxjs';
+import { IChapterSlim } from '../shared/interfaces/ichapter-slim';
+import { IChapterDetails } from '../shared/interfaces/ichapter-details';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ChaptersDataService {
+  private _chaptersSlim: IChapterSlim[] = [];
+  // get chaptersSlim() {
+  //   return this._chaptersSlim;
+  // }
+
   constructor(private http: HttpClient) {}
 
-  getAllChaptersSlim(): Observable<ChapterSlim[]> {
-    return this.http.get<ChapterSlim[]>(
-      '../../assets/data/total-chapters.json'
-    );
+  getAllChaptersSlim(): Observable<IChapterSlim[]> {
+    if (this._chaptersSlim.length > 0) {
+      console.log('From cached array');
+      return of(this._chaptersSlim);
+    } else {
+      console.log('From http request');
+      return this.http
+        .get<IChapterSlim[]>('../../assets/data/total-chapters.json')
+        .pipe(tap((data) => (this._chaptersSlim = data)));
+    }
   }
 
-  getChapterItemsAll(chapterName: string): Observable<ChapterDetails[]> {
-    return this.http.get<ChapterDetails[]>(
+  getChapterItemsAll(chapterName: string): Observable<IChapterDetails[]> {
+    return this.http.get<IChapterDetails[]>(
       `../../assets/data/${chapterName}.json`
     );
   }
@@ -25,9 +36,9 @@ export class ChaptersDataService {
   getChapterSection(
     chapterName: string,
     orderIndex: number
-  ): Observable<ChapterDetails | undefined> {
+  ): Observable<IChapterDetails | undefined> {
     return this.http
-      .get<ChapterDetails[]>(`../../assets/data/${chapterName}.json`)
+      .get<IChapterDetails[]>(`../../assets/data/${chapterName}.json`)
       .pipe(map((data) => data.find((rec) => rec.orderIndex === orderIndex)));
   }
 }

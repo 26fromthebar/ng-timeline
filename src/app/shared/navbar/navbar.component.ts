@@ -1,22 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ChaptersDataService } from 'src/app/services/chapters-data';
-import { ChapterSlim } from '../classes/chapter-slim';
+import { IChapterSlim } from '../interfaces/ichapter-slim';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'tl-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, OnDestroy {
   title: string = 'Menu';
-  data: ChapterSlim[] = [];
-  sub!: PushSubscription;
+  data: IChapterSlim[] = [];
+  sub!: Subscription;
   constructor(private chaptersData: ChaptersDataService) {}
 
   ngOnInit(): void {
-    this.chaptersData.getAllChaptersSlim().subscribe({
+    this.sub = this.chaptersData.getAllChaptersSlim().subscribe({
       next: (data) => (this.data = data),
       error: (err) => console.log(err),
     });
+  }
+
+  ngOnDestroy(): void {
+    this.sub.unsubscribe();
   }
 }

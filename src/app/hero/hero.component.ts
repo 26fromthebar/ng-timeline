@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChaptersDataService } from '../services/chapters-data';
-import { ChapterDetails } from '../shared/classes/chapter-details';
 import { ActivatedRoute } from '@angular/router';
+import { IChapterDetails } from '../shared/interfaces/ichapter-details';
 
 @Component({
   selector: 'tl-hero',
@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./hero.component.scss'],
 })
 export class HeroComponent implements OnInit {
-  chapter: ChapterDetails | undefined;
+  chapter: IChapterDetails | undefined;
 
   constructor(
     private chaptersData: ChaptersDataService,
